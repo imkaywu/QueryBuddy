@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".QueryBuddy" >
+    <TextView
+	    android:id="@+id/result"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center" />
+    
+    <com.example.querybuddy.SlipButton  
+        android:id="@+id/slipButton"  
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result"  
+        android:layout_marginLeft="10dip"
+        android:layout_marginBottom="10dip" />  
+    
+	<LinearLayout
+	    android:id="@+id/linearLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+ 		android:layout_marginBottom="10dip"
+ 		android:layout_marginTop="50dip"
+ 		android:layout_marginLeft="30dip"
+ 		android:layout_marginRight="30dip"
+ 		android:layout_below="@id/result"
+	    android:orientation="horizontal" >
+	    <com.example.querybuddy.WheelView
+	    	android:id="@+id/buildingNum"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:layout_marginRight="15dip" />
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_marginLeft="15dip">
+	        <com.example.querybuddy.WheelView
+	    		android:id="@+id/classroomNumH"
+	    		android:layout_width="70dip"
+	    		android:layout_height="wrap_content"
+	        	android:layout_marginRight="10dip" />
+	    
+	    	<com.example.querybuddy.WheelView
+	    		android:id="@+id/classroomNumT"
+	    		android:layout_width="70dip"
+	    		android:layout_height="wrap_content"
+	        	android:layout_marginRight="10dip" />
+	    	
+	    	<com.example.querybuddy.WheelView
+	    		android:id="@+id/classroomNumU"
+	    		android:layout_width="70dip"
+	    		android:layout_height="wrap_content"
+	        	android:layout_marginRight="10dip" />
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/linearLayout2"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="30dip"
+	    android:layout_marginLeft="30dip"
+	    android:orientation="horizontal"
+	    android:layout_below="@id/linearLayout1" >
+	    <com.example.querybuddy.WheelView
+	    	android:id="@+id/dayOfWeek"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:layout_marginRight="15dip" />
+	    
+	    <com.example.querybuddy.WheelView
+	    	android:id="@+id/timeInterval"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:layout_marginLeft="15dip" />
+	</LinearLayout>
+
+	<Button
+	    android:id="@+id/sendB"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/linearLayout2"
+	    android:layout_centerHorizontal="true"
+	    android:gravity="center"
+	    android:text="@string/sendB"
+	    android:textColor="#ffffff"
+	    android:textSize="50sp" />
+
+</RelativeLayout>
